@@ -1,0 +1,5 @@
+TERM=dumb rebar3 experimental vendor
+>>>= 0
+
+ls vendor/yaws
+>>>= 0
