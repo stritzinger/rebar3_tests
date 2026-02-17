@@ -1,0 +1,7 @@
+TERM=dumb rebar3 experimental manifest -f erlang
+>>> /deps =>/
+>>>= 0
+
+TERM=dumb rebar3 experimental manifest -f erlang
+>>> /yaws/
+>>>= 0
