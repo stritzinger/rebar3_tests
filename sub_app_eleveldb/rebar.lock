@@ -20,7 +20,7 @@
   0},
  {<<"mochiweb">>,
   {git,"https://github.com/mochi/mochiweb.git",
-       {ref,"c3fb6aed018d47a9c313daa966657a157d88dbc6"}},
+       {ref,"edea3841bf7492a6ec1e654ce086aa1dd6505f8a"}},
   0},
  {<<"procket">>,
   {git,"https://github.com/msantos/procket.git",
