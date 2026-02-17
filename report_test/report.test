@@ -1,0 +1,3 @@
+rebar3 report compile
+>>> /Task: compile/
+>>>= 0
