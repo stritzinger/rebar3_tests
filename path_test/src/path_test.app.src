@@ -1,0 +1,8 @@
+{application, path_test,
+ [{description, "A shelltest app for rebar3 path"}
+ ,{vsn, "0.1.0"}
+ ,{registered, []}
+ ,{applications, [kernel, stdlib]}
+ ,{env, []}
+ ,{modules, []}
+ ]}.
