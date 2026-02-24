@@ -36,3 +36,15 @@ rebar3 help plugins list
 List local and global plugins for this project
 Usage: rebar3 plugins list
 >>>= 0
+
+rebar3 -v
+>>> /rebar .* on Erlang\/OTP .*/
+>>>= 0
+
+rebar3 version
+>>> /rebar .* on Erlang\/OTP .*/
+>>>= 0
+
+rebar3 --version
+>>> /rebar .* on Erlang\/OTP .*/
+>>>= 0
