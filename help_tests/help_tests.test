@@ -45,14 +45,14 @@ List local and global plugins for this project
 rebar3 help as
 >>>
 Usage:
-  rebar3 as <profile> <task>...
+  rebar3 as <profiles> <tasks>...
 
-Higher order provider for running multiple tasks in a sequence as a certain
+Higher order provider for running multiple tasks in a sequence as certain
 profiles.
 
 Arguments:
-  profile Profiles to run as. (string)
-  task    Tasks to run. (string)
+  profiles Profiles to run as. (string)
+  tasks    Tasks to run. (string)
 >>>= 0
 
 rebar3 help do
