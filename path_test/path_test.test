@@ -1,6 +1,6 @@
-TERM=dumb rebar3 compile
+TERM=dumb rebar compile
 >>>= 0
 
-TERM=dumb rebar3 path
+TERM=dumb rebar path
 >>> /.*_build\/default\/lib\/path_test\/ebin.*/
 >>>= 0

@@ -1,2 +1,2 @@
-TERM=dumb rebar3 eunit
+TERM=dumb rebar eunit
 >>>= 0

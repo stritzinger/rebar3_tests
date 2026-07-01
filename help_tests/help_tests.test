@@ -1,19 +1,19 @@
-rebar3 new help
->>> /Call `rebar3 new help <template>` for a detailed description/
+rebar new help
+>>> /Call `rebar new help <template>` for a detailed description/
 >>>= 0
 
-rebar3 new
+rebar new
 >>> /required argument missing: template/
 >>>= 1
 
-rebar3 help
+rebar help
 >>> /compile.*Compile apps /
 >>>= 0
 
-rebar3 plugins
+rebar plugins
 >>>
 Usage:
-  rebar3 plugins {list|upgrade}
+  rebar plugins {list|upgrade}
 
 plugins namespace
 
@@ -22,10 +22,10 @@ Subcommands:
   upgrade Upgrade plugins
 >>>= 0
 
-rebar3 help plugins
+rebar help plugins
 >>>
 Usage:
-  rebar3 plugins {list|upgrade}
+  rebar plugins {list|upgrade}
 
 plugins namespace
 
@@ -34,18 +34,18 @@ Subcommands:
   upgrade Upgrade plugins
 >>>= 0
 
-rebar3 help plugins list
+rebar help plugins list
 >>>
 Usage:
-  rebar3 plugins list
+  rebar plugins list
 
 List local and global plugins for this project
 >>>= 0
 
-rebar3 help as
+rebar help as
 >>>
 Usage:
-  rebar3 as <profiles> <tasks>...
+  rebar as <profiles> <tasks>...
 
 Higher order provider for running multiple tasks in a sequence as certain
 profiles.
@@ -55,10 +55,10 @@ Arguments:
   tasks    Tasks to run. (string)
 >>>= 0
 
-rebar3 help do
+rebar help do
 >>>
 Usage:
-  rebar3 do <task>...
+  rebar do <task>...
 
 Higher order provider for running multiple tasks in a sequence.
 
@@ -66,14 +66,14 @@ Arguments:
   task Tasks to run. (string)
 >>>= 0
 
-rebar3 -v
+rebar -v
 >>> /rebar .* on Erlang\/OTP .*/
 >>>= 0
 
-rebar3 version
+rebar version
 >>> /rebar .* on Erlang\/OTP .*/
 >>>= 0
 
-rebar3 --version
+rebar --version
 >>> /rebar .* on Erlang\/OTP .*/
 >>>= 0

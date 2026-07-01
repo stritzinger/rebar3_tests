@@ -1,10 +1,10 @@
-TERM=dumb rebar3 clean
+TERM=dumb rebar clean
 >>>
 ===> Cleaning out single_app_hooks...
 CLEAN!
 >>>= 0
 
-TERM=dumb rebar3 compile
+TERM=dumb rebar compile
 >>>
 ===> Verifying dependencies...
 ===> Analyzing applications...

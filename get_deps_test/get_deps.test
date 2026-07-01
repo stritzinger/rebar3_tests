@@ -1,4 +1,4 @@
-TERM=dumb rebar3 get-deps
+TERM=dumb rebar get-deps
 >>>= 0
 
 ls _build/default/lib/yaws

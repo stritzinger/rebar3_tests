@@ -13,7 +13,7 @@ then
     export PATH=$(dirname $(realpath $0)):$PATH
 fi
 
-rebar3 version
+rebar version
 
 find . -name _build | xargs rm -rf
 

@@ -1,2 +1,2 @@
-TERM=dumb rebar3 compile
+TERM=dumb rebar compile
 >>>= 0

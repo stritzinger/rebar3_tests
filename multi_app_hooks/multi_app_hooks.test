@@ -1,10 +1,10 @@
-TERM=dumb rebar3 clean
+TERM=dumb rebar clean
 >>>
 ===> Cleaning out multi_app_hooks...
 CLEAN!
 >>>= 0
 
-TERM=dumb rebar3 compile
+TERM=dumb rebar compile
 >>>
 ===> Verifying dependencies...
 ===> Analyzing applications...
@@ -12,6 +12,6 @@ TERM=dumb rebar3 compile
 COMPILE!
 >>>= 0
 
-TERM=dumb rebar3 as prod tar
+TERM=dumb rebar as prod tar
 >>> !/===> Dev mode enabled, release will be symlinked/
 >>>= 0

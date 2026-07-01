@@ -1,3 +1,2 @@
-TERM=dumb rebar3 release
+TERM=dumb rebar release
 >>>= 0
-

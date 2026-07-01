@@ -1,2 +1,2 @@
-TERM=dumb rebar3 ct
+TERM=dumb rebar ct
 >>>= 1

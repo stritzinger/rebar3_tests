@@ -1,14 +1,14 @@
-rebar3 release
+rebar release
 >>>= 1
-rebar3 release --relname app1
+rebar release --relname app1
 >>>= 0
 ls _build/default/rel/app1/releases
 >>>= 0
-rebar3 release --relnames app1,both
+rebar release --relnames app1,both
 >>>= 0
 ls _build/default/rel/both/releases
 >>>= 0
-rebar3 release --all
+rebar release --all
 >>>= 0
 ls _build/default/rel/app2/releases
 >>>= 0

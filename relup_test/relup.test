@@ -2,22 +2,22 @@
 # These tests make sure that rebar3 can create a release upgrade
 # and apply it to a release.
 #
-rebar3 tar  --relname relup_test --relvsn 0.1.0
+rebar tar  --relname relup_test --relvsn 0.1.0
 >>>= 0
-rebar3 release --relname relup_test --relvsn 0.2.0
+rebar release --relname relup_test --relvsn 0.2.0
 >>>= 0
-rebar3 relup
+rebar relup
 >>> /.*Option --relname is missing.*/
 >>>= 1
-rebar3 relup --relname relup_test
+rebar relup --relname relup_test
 >>> /.*Option --relvsn is missing*/
 >>>= 1
-rebar3 relup --relvsn 0.2.0
+rebar relup --relvsn 0.2.0
 >>> /.*Option --relname is missing.*/
 >>>= 1
-rebar3 relup --relname relup_test --relvsn 0.2.0
+rebar relup --relname relup_test --relvsn 0.2.0
 >>>= 0
-rebar3 tar --relname relup_test --relvsn 0.2.0
+rebar tar --relname relup_test --relvsn 0.2.0
 >>>= 0
 mkdir _build/rel
 >>>= 0

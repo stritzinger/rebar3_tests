@@ -1,2 +1,2 @@
-TERM=dumb rebar3 dialyzer
+TERM=dumb rebar dialyzer
 >>>= 0

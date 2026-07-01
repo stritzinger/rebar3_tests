@@ -1,4 +1,4 @@
-TERM=dumb rebar3 experimental vendor
+TERM=dumb rebar experimental vendor
 >>>= 0
 
 ls vendor/yaws

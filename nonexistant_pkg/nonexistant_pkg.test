@@ -1,11 +1,11 @@
-TERM=dumb rebar3 compile
+TERM=dumb rebar compile
 >>>
 ===> Verifying dependencies...
 ===> Failed to update package dont_exist from repo hexpm
 ===> Package not found in any repo: dont_exist
 >>>= 1
 
-TERM=dumb rebar3 pkgs madeuppackagename
+TERM=dumb rebar pkgs madeuppackagename
 >>>
 ===> Package madeuppackagename not found in any repo.
 >>>= 1
