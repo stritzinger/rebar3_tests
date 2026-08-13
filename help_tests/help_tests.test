@@ -13,24 +13,26 @@ rebar help
 rebar plugins
 >>>
 Usage:
-  rebar plugins {list|upgrade}
+  rebar plugins {list|unlock|upgrade}
 
 plugins namespace
 
 Subcommands:
   list    List local and global plugins for this project
+  unlock  Unlock plugins.
   upgrade Upgrade plugins
 >>>= 0
 
 rebar help plugins
 >>>
 Usage:
-  rebar plugins {list|upgrade}
+  rebar plugins {list|unlock|upgrade}
 
 plugins namespace
 
 Subcommands:
   list    List local and global plugins for this project
+  unlock  Unlock plugins.
   upgrade Upgrade plugins
 >>>= 0
 
