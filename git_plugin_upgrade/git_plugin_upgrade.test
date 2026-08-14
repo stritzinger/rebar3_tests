@@ -11,3 +11,6 @@ TERM=dumb rebar plugins upgrade rebar3_clojerl
 sed -i.bak 's/0.6.5/0.6.6/' rebar.config && rm -f rebar.config.bak
 >>>
 >>>=0
+
+TERM=dumb rebar plugins upgrade rebar3_clojerl
+>>>= 0
