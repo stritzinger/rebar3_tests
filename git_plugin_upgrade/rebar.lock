@@ -1,1 +1,7 @@
+{"2.0.0",
+[{deps,[]},
+ {plugins,[{<<"rebar3_clojerl">>,
+            {git,"https://github.com/clojerl/rebar3_clojerl.git",
+                 {ref,"057307d2d3cf66c4f61ac7bd59be984728b00337"}},
+            0}]}]}.
 [].

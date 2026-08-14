@@ -1,7 +1,21 @@
-[{<<"snappy">>,
-  {raw,"https://github.com/google/snappy.git",
-       {mod_ref,git,
-                {ref,"156cd8939c5fba7fa68ae08db843377ecc07b4b5"},
-                [{description,"Google's Snappy compression library"},
-                 {vsn,"probably-not-a-good-idea-to-override-this"}]}},
-  0}].
+{"2.0.0",
+[{deps,[{<<"snappy">>,
+         {raw,"https://github.com/google/snappy.git",
+              {mod_ref,git,
+                       {ref,"156cd8939c5fba7fa68ae08db843377ecc07b4b5"},
+                       [{description,"Google's Snappy compression library"},
+                        {vsn,"probably-not-a-good-idea-to-override-this"}]}},
+         0}]},
+ {plugins,[{<<"rebar_raw_resource">>,
+            {pkg,<<"rebar_raw_resource">>,<<"0.11.0">>},
+            0}]}]}.
+[
+{pkg_hash,[
+{deps, []},
+{plugins, [
+ {<<"rebar_raw_resource">>, <<"B8D6D885F5AE41E1334DB716FA58C5F1A9DB97066C14EFC88B1F620AA79D137D">>}]}]},
+{pkg_hash_ext,[
+{deps, []},
+{plugins, [
+ {<<"rebar_raw_resource">>, <<"B8710A5FF883181AA02EA32C3BBE3A7225DE4D69B6EEDC8038FF718065AA604C">>}]}]}
+].

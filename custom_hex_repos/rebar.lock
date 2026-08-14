@@ -1,8 +1,15 @@
-{"1.2.0",
-[{<<"elli">>,{pkg,<<"elli">>,<<"3.1.0">>},0}]}.
+{"2.0.0",
+[{deps,[{<<"elli">>,{pkg,<<"elli">>,<<"3.1.0">>},0}]},
+ {plugins,[{<<"rebar_erl_vsn">>,{pkg,<<"rebar_erl_vsn">>,<<"0.1.7">>},1}]}]}.
 [
 {pkg_hash,[
+{deps, [
  {<<"elli">>, <<"3B0C46B549BAC00DB06FF79A87B69A7FE06F3B24E7E06858FF6CCD9654276785">>}]},
+{plugins, [
+ {<<"rebar_erl_vsn">>, <<"60F0858BDE2AEF6A55282A915F62B43447D2C6AF200A349F3392EB3F802163DC">>}]}]},
 {pkg_hash_ext,[
- {<<"elli">>, <<"3AF5F66616187A303EC722F957DDA7E09951A2FA2EE797EECBDFF5E2109417E8">>}]}
+{deps, [
+ {<<"elli">>, <<"3AF5F66616187A303EC722F957DDA7E09951A2FA2EE797EECBDFF5E2109417E8">>}]},
+{plugins, [
+ {<<"rebar_erl_vsn">>, <<"8B5000710B11C4BC8B53C2B26A3185D3827155682296902045255A7A5ED5AED2">>}]}]}
 ].
