@@ -1,8 +1,15 @@
-{"1.2.0",
-[{<<"jiffy">>,{pkg,<<"jiffy">>,<<"0.14.7">>},0}]}.
+{"2.0.0",
+[{deps,[{<<"jiffy">>,{pkg,<<"jiffy">>,<<"0.14.7">>},0}]},
+ {plugins,[{<<"pc">>,{pkg,<<"pc">>,<<"1.15.0">>},1}]}]}.
 [
 {pkg_hash,[
+{deps, [
  {<<"jiffy">>, <<"9F33B893EDD6041CEAE03BC1E50B412E858CC80B46F3D7535A7A9940A79A1C37">>}]},
+{plugins, [
+ {<<"pc">>, <<"0DE7D4DF1BB23897E27965FC134DC63156DD2E5B512A9536CB7004D984400A45">>}]}]},
 {pkg_hash_ext,[
- {<<"jiffy">>, <<"2B3B0F7976DAE9C8266036E0D7E0398B64AC5207E3BEEE4C57896E44B2C17E97">>}]}
+{deps, [
+ {<<"jiffy">>, <<"2B3B0F7976DAE9C8266036E0D7E0398B64AC5207E3BEEE4C57896E44B2C17E97">>}]},
+{plugins, [
+ {<<"pc">>, <<"4C0FAD4F6437CAE353D517DA218FE78347B8FFA44B9817887494CAAAE54595B3">>}]}]}
 ].
