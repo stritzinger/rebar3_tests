@@ -1,0 +1,14 @@
+% SPDX-FileCopyrightText: 2026 Peer Stritzinger GmbH
+%
+% SPDX-License-Identifier: Apache-2.0
+
+{application, sbom_test,
+ [{description, "SBOM plugin integration test"},
+  {vsn, "0.1.0"},
+  {registered, []},
+  {applications, [kernel, stdlib]},
+  {env, []},
+  {modules, []},
+  {licenses, ["Apache-2.0"]},
+  {links, []}
+ ]}.

@@ -1,0 +1,21 @@
+# SPDX-FileCopyrightText: 2026 Peer Stritzinger GmbH
+#
+# SPDX-License-Identifier: Apache-2.0
+
+rm -f bom.xml
+>>>= 0
+
+TERM=dumb rebar sbom
+>>>= 0
+
+test -s bom.xml
+>>>= 0
+
+rg 'rebar_sbom' bom.xml
+>>>= 0
+
+rg '<name>jsone</name>' bom.xml
+>>>= 0
+
+rm -f bom.xml
+>>>= 0
