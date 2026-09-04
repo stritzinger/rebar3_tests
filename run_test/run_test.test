@@ -1,0 +1,6 @@
+# SPDX-FileCopyrightText: 2026 Peer Stritzinger GmbH
+#
+# SPDX-License-Identifier: Apache-2.0
+TERM=dumb rebar help run
+>>> /run/
+>>>= 0
