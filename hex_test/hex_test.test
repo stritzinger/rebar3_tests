@@ -1,0 +1,8 @@
+# SPDX-FileCopyrightText: 2026 Peer Stritzinger GmbH
+#
+# SPDX-License-Identifier: Apache-2.0
+TERM=dumb rebar hex build package
+>>>= 0
+
+find _build -name 'hex_test-0.1.0.tar' -type f | rg .
+>>>= 0
