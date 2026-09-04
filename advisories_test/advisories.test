@@ -1,0 +1,39 @@
+TERM=dumb rebar get-deps
+>>> !/Warning: package hackney-1.20.1 has known vulnerabilities:/
+>>>= 0
+
+TERM=dumb rebar get-deps
+>>> /Security advisories:/
+>>>= 0
+
+TERM=dumb rebar get-deps
+>>> /hackney-1.20.1:/
+>>>= 0
+
+TERM=dumb rebar get-deps
+>>> /Server-side Request Forgery/
+>>>= 0
+
+TERM=dumb rebar tree
+>>> !/Warning: package hackney-1.20.1 has known vulnerabilities:/
+>>>= 0
+
+TERM=dumb rebar tree
+>>> /hackney.*1.20.1.*VULNERABLE!/
+>>>= 0
+
+TERM=dumb rebar tree
+>>> /Security advisories:/
+>>>= 0
+
+TERM=dumb rebar tree
+>>> /GHSA-vq52-99r9-h5pw/
+>>>= 0
+
+TERM=dumb rebar compile
+>>> /Warning: package hackney-1.20.1 has known vulnerabilities:/
+>>>= 0
+
+TERM=dumb rebar compile
+>>> !/Security advisories:/
+>>>= 0
