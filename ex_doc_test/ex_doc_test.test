@@ -1,0 +1,17 @@
+# SPDX-FileCopyrightText: 2026 Peer Stritzinger GmbH
+#
+# SPDX-License-Identifier: Apache-2.0
+rm -rf doc
+>>>= 0
+
+TERM=dumb rebar ex_doc
+>>>= 0
+
+test -s doc/index.html
+>>>= 0
+
+rg 'ex_doc_test' doc/index.html
+>>>= 0
+
+rm -rf doc
+>>>= 0

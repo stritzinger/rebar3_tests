@@ -1,0 +1,13 @@
+% SPDX-FileCopyrightText: 2026 Peer Stritzinger GmbH
+%
+% SPDX-License-Identifier: Apache-2.0
+{application, ex_doc_test,
+ [{description, "ExDoc plugin integration test"},
+  {vsn, "0.1.0"},
+  {registered, []},
+  {applications, [kernel, stdlib]},
+  {env, []},
+  {modules, [ex_doc_test]},
+  {licenses, ["Apache-2.0"]},
+  {links, []}
+ ]}.
