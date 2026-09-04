@@ -1,0 +1,39 @@
+# SPDX-FileCopyrightText: 2026 Peer Stritzinger GmbH
+#
+# SPDX-License-Identifier: Apache-2.0
+
+$ TERM=dumb rebar grisp --help
+> /grisp/
+>= 0
+
+$ TERM=dumb rebar grisp configure --help
+> /(configure|--name)/
+>= 0
+
+$ TERM=dumb rebar grisp deploy --help
+> /(deploy|--relname)/
+>= 0
+
+$ TERM=dumb rebar grisp report --help
+> /(report|--tar)/
+>= 0
+
+$ TERM=dumb rebar grisp package list --cached
+> /.*/
+>= 0
+
+$ rm -rf grisp_generated
+>= 0
+
+$ TERM=dumb rebar grisp configure -i false --name=grisp_generated --dest=/tmp/grisp_test_destination
+> /.*/
+>= 0
+
+$ test -f grisp_generated/src/grisp_generated.app.src
+>= 0
+
+$ test -f grisp_generated/rebar.config
+>= 0
+
+$ rm -rf grisp_generated
+>= 0
