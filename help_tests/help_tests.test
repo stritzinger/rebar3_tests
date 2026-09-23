@@ -1,9 +1,9 @@
 rebar new help
->>> /Call `rebar new help <template>` for a detailed description/
->>>= 0
+>>> /Template 'help' not found. See available templates with: `rebar new --list`./
+>>>= 1
 
 rebar new
->>> /required argument missing: template/
+>>> /Template name is required unless --list is used./
 >>>= 1
 
 rebar help
