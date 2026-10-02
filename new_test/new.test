@@ -1,0 +1,67 @@
+# List built-in templates with both flag spellings.
+TERM=dumb rebar new --list
+>>> /app \(built-in\): Complete OTP Application structure\.[[:space:][:print:]]*lib \(built-in\): Complete OTP Library application[[:space:][:print:]]*release \(built-in\): OTP Release structure/
+>>>= 0
+
+TERM=dumb rebar new -l
+>>> /app \(built-in\): Complete OTP Application structure\.[[:space:][:print:]]*lib \(built-in\): Complete OTP Library application[[:space:][:print:]]*release \(built-in\): OTP Release structure/
+>>>= 0
+
+# General help should work without a template name.
+rebar new --help
+>>> /Usage:[[:space:][:print:]]*rebar new[[:space:][:print:]]*--list[[:space:][:print:]]*--force[[:space:][:print:]]*Create new project from templates\./
+>>>= 0
+
+# Template help must include its description and documented variables.
+rebar new app --help
+>>> /app:[[:space:][:print:]]*built-in template[[:space:][:print:]]*Description: Complete OTP Application structure\.[[:space:][:print:]]*Variables:[[:space:][:print:]]*name="mylib" \(Name of the OTP application\)[[:space:][:print:]]*desc="An OTP application"/
+>>>= 0
+
+rebar new app -h
+>>> /app:[[:space:][:print:]]*built-in template[[:space:][:print:]]*Description: Complete OTP Application structure\.[[:space:][:print:]]*Variables:[[:space:][:print:]]*name="mylib" \(Name of the OTP application\)[[:space:][:print:]]*desc="An OTP application"/
+>>>= 0
+
+rebar help new app
+>>> /app:[[:space:][:print:]]*built-in template[[:space:][:print:]]*Description: Complete OTP Application structure\.[[:space:][:print:]]*Variables:[[:space:][:print:]]*name="mylib" \(Name of the OTP application\)[[:space:][:print:]]*desc="An OTP application"/
+>>>= 0
+
+# Unknown templates must fail during creation and help.
+TERM=dumb rebar new missing_template
+>>>
+===> Template 'missing_template' not found. See available templates with: `rebar new --list`.
+>>>= 1
+
+TERM=dumb rebar new missing_template --help
+>>>
+===> Template 'missing_template' not found. See available templates with: `rebar new --list`.
+>>>= 1
+
+# Listing and template help must not generate a project.
+tmpdir=$(mktemp -d) && trap 'rm -rf "$tmpdir"' EXIT && cd "$tmpdir" && rebar new app name=listed_app --list >/dev/null && rebar new app --help >/dev/null && test -z "$(ls -A)"
+>>>= 0
+
+# Create an OTP application with explicit template variables.
+tmpdir=$(mktemp -d) && trap 'rm -rf "$tmpdir"' EXIT && cd "$tmpdir" && rebar new app name=named_app desc="Shell test application" >/dev/null && test -f named_app/rebar.config && test -f named_app/src/named_app_sup.erl && test -f named_app/src/named_app_app.erl && grep -F '{application, named_app,' named_app/src/named_app.app.src && grep -F '{description, "Shell test application"}' named_app/src/named_app.app.src
+>>>
+{application, named_app, [
+    {description, "Shell test application"},
+>>>= 0
+
+# The first positional variable remains a shorthand for the project name.
+tmpdir=$(mktemp -d) && trap 'rm -rf "$tmpdir"' EXIT && cd "$tmpdir" && rebar new app positional_app >/dev/null && test -f positional_app/rebar.config && grep -F '{application, positional_app,' positional_app/src/positional_app.app.src
+>>>
+{application, positional_app, [
+>>>= 0
+
+# Existing files must be preserved unless force is requested.
+tmpdir=$(mktemp -d) && trap 'rm -rf "$tmpdir"' EXIT && cd "$tmpdir" && rebar new app protected_app >/dev/null && printf 'keep this file\n' > protected_app/src/protected_app.app.src && rebar new app protected_app >/dev/null && grep -Fx 'keep this file' protected_app/src/protected_app.app.src
+>>>
+keep this file
+>>>= 0
+
+# Both force flags must overwrite existing files with rendered content.
+tmpdir=$(mktemp -d) && trap 'rm -rf "$tmpdir"' EXIT && cd "$tmpdir" && rebar new app forced_app >/dev/null && printf 'replace this file\n' > forced_app/src/forced_app.app.src && rebar new app forced_app --force >/dev/null && grep -F '{application, forced_app,' forced_app/src/forced_app.app.src && printf 'replace this file\n' > forced_app/src/forced_app.app.src && rebar new app -f forced_app >/dev/null && grep -F '{application, forced_app,' forced_app/src/forced_app.app.src
+>>>
+{application, forced_app, [
+{application, forced_app, [
+>>>= 0
