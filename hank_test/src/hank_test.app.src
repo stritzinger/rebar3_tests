@@ -1,0 +1,11 @@
+% SPDX-FileCopyrightText: Copyright 2026 Dipl. Phys. Peer Stritzinger GmbH
+%
+% SPDX-License-Identifier: Apache-2.0
+
+{application, hank_test,
+ [{description, "Hank plugin integration test"},
+  {vsn, "0.1.0"},
+  {registered, []},
+  {applications, [kernel, stdlib]},
+  {env, []},
+  {modules, []}]}.
